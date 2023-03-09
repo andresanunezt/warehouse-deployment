@@ -1,12 +1,11 @@
 import ".//Home.css";
+import logo from "../components/windLogo2.png";
 const Home = (props) => {
   return (
     <div>
       <div class="backgroundpicIV">
         <div class="home">
-
           <div class="home-card">
-
             <p className="home-paragraph">
               {" "}
               Welcome to Wind Warehouse
@@ -16,12 +15,12 @@ const Home = (props) => {
               <br></br>
               <br></br>
             </p>
-            {
-              props.user ? 
+            {props.user ? (
               <p>Welcome {props.user.data.user.firstName.toUpperCase()}</p>
-              :<p> Please signup or sign in to begin</p>
-            }
-            <img className="main-logo" src="../public/2.png" alt="Wind Warehouse Logo." />
+            ) : (
+              <p> Please signup or sign in to begin</p>
+            )}
+            <img className="main-logo" src={logo} alt="Wind Warehouse Logo." />
           </div>
         </div>
       </div>
